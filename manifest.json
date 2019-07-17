@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+   "name": "Du Data",
+    "description": "This extension calculates data usage",
+    "version": "1.0",
+   "content_scripts": [
+    {
+    "matches": ["http://mydata.du.ae/*"],
+    "css": ["main.css"],
+    "js": ["content.js"]
+    }
+    ],
+    "page_action": {
+    "default_icon": "img.png",
+    "default_popup": "popup.html",
+    "default_title": "DU Data Consumption Calculator"
+    }
+   }
