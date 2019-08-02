@@ -24,7 +24,12 @@ function appendView(val){
 
 var row = document.getElementsByClassName("dtb")[0].textContent;
 var usage_arr = row.split('/')[0].split(' ')
+var mbgb = usage_arr[1]
 var usage = parseFloat(usage_arr[0])
+
+if(mbgb == 'MB'){
+    usage = usage/1000
+}
 
 var daysInThisMonth = daysInThisMonth()
 var dailyAllowed = 18.0/daysInThisMonth
